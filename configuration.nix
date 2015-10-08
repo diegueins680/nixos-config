@@ -27,6 +27,7 @@ let
     taffybar
     xmobar
     xmonad
+    xmonad-extras
 #    xmonadContrib
 #    xmonadExtras
     yeganesh
@@ -246,6 +247,12 @@ in
   services.btsync.enable = true;
   services.btsync.enableWebUI = true;
   services.btsync.httpListenAddr = "127.0.0.1";
+
+  services.redshift.enable = true;
+  services.redshift.brightness.day = "0.8";
+  services.redshift.brightness.night = "0.4";
+  services.redshift.latitude = "0.0000";
+  services.redshift.longitude = "0.0000";
 
   services.openssh.enable = true;
   services.openssh.permitRootLogin = "yes";
