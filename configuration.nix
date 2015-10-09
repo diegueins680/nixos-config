@@ -105,6 +105,7 @@ in
     #(haskellPackages.hoogleLocal.override {
     #   packages = hsPackages;
     # })
+    icu
     irssi
     #jack
     jack_rack
