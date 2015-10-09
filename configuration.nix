@@ -8,11 +8,9 @@ let
   hsPackages = with pkgs.haskellPackages; [
     aeson
     cabal2nix
-#   csound-expression
     cabal-install
     crypto-pubkey-types
     ghc
-#    ghcCore
     ghcid
     hlint
     idris
@@ -23,13 +21,11 @@ let
     reflex
     RSA
     SHA2
-#    stylishHaskell
     taffybar
+    text-icu
     xmobar
     xmonad
     xmonad-extras
-#    xmonadContrib
-#    xmonadExtras
     yeganesh
     yi
   ];
@@ -40,9 +36,6 @@ in
       ./hardware-configuration.nix
     ];
 
-  #boot.kernelPackages = pkgs.linuxPackages_3_17;
-  #boot.loader.gummiboot.enable = true;
-  #boot.loader.gummiboot.timeout = 5;
   boot.loader.gummiboot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -102,12 +95,8 @@ in
     gitFull
     gravit
     htop
-    #(haskellPackages.hoogleLocal.override {
-    #   packages = hsPackages;
-    # })
     icu
     irssi
-    #jack
     jack_rack
     jack2Full
     libao
@@ -144,7 +133,7 @@ in
   ] ++ hsPackages;
 
   # Enable CUPS to print documents.
-  # services.printing.enable = true;
+  services.printing.enable = true;
 
   services.ntp.enable = true;
 
@@ -238,7 +227,6 @@ in
   };
 
   networking.hostName = "jet-nixos";
-  #networking.wireless.enable = true;  # Enables wireless.
   networking.networkmanager.enable = true;
   services.upower.enable = true;
 
@@ -258,8 +246,6 @@ in
   services.openssh.enable = true;
   services.openssh.permitRootLogin = "yes";
   programs.ssh.agentTimeout = "12h";
-
-  # virtualisation.docker.enable = true;
 
   programs.zsh.enable = true;
 }
