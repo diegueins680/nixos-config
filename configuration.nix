@@ -79,6 +79,7 @@ in
     binutils
     chromium
     clojure
+    coq_HEAD
     csound
     cups
     dblatex
@@ -88,6 +89,7 @@ in
     electrum
     emacs
     firefox
+    fuse
     gcc
     gimp
     #gnash
@@ -107,7 +109,10 @@ in
     mpg321
     ncurses
     networkmanagerapplet
+    networkmanager_openvpn
     nix-repl
+    openvpn
+    pyqt4
     qjackctl
     rxvt_unicode
     silver-searcher
@@ -118,6 +123,7 @@ in
     torbrowser
     thunderbird
     transmission
+    unzip
     vagrant
     wpa_supplicant_gui
     sudo
