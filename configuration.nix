@@ -12,7 +12,9 @@ let
     crypto-pubkey-types
     ghc
     ghcid
+    #haskoin
     hlint
+    hspec
     idris
     pandoc
     pointfree
@@ -21,6 +23,7 @@ let
     reflex
     RSA
     SHA2
+    shelly
     taffybar
     text-icu
     xmobar
@@ -74,68 +77,105 @@ in
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    androidsdk_4_4
+    apacheKafka
+    arandr
     ardour
     arp-scan
+    aspell
+    autoconf
+    automake
+    aws
+    awscli
     binutils
+    blueman
+    bluez
     chromium
+    chuck
     clojure
     coq_HEAD
+    cppzmq
     csound
     cups
     dblatex
     deluge
     dmenu
     doxygen
+    dpkg
     electrum
+    enhanced-ctorrent
     emacs
     firefox
+    freeglut
+    freerdp
     fuse
     gcc
     gimp
-    #gnash
-    gnupg
     gitFull
+    gnumake
+    gnupg
+    gnupg1
+    go-mtpfs
     gravit
     htop
     icu
+    idea.android-studio
     irssi
-    jack_rack
     jack2Full
+    jack_rack
+    jmtpfs
+    leveldb
     libao
     libjack2
+    libmtp
     libreoffice
+    libsodium
     llvm
-    mplayer
+    mktorrent
     mpg321
+    mplayer
+    mtpfs
     ncurses
-    networkmanagerapplet
     networkmanager_openvpn
+    networkmanagerapplet
     nix-repl
     openvpn
+    patchelf
+    pidgin
+    pkgconfig
     pyqt4
+    python
+    python34Packages.pyalgotrade
+    qbittorrent
     qjackctl
+    qtbitcointrader
+    rdesktop
     rxvt_unicode
     silver-searcher
-    stellarium
+    snappy
     sooperlooper
+    stack
+    stalonetray
+    sudo
     terminator
     thunderbird
     torbrowser
-    thunderbird
     transmission
     unzip
     vagrant
-    wpa_supplicant_gui
-    sudo
-    wireshark
     wget
+    wireshark
+    wpa_supplicant_gui
     xchat
     xclip
+    x2goclient
     xorg.xev
     xscreensaver
     yoshimi
     youtube-dl
     zam-plugins
+    zeromq3
+    zlib
   ] ++ hsPackages;
 
   # Enable CUPS to print documents.
@@ -243,11 +283,11 @@ in
   services.btsync.enableWebUI = true;
   services.btsync.httpListenAddr = "127.0.0.1";
 
-  services.redshift.enable = true;
-  services.redshift.brightness.day = "0.8";
-  services.redshift.brightness.night = "0.4";
-  services.redshift.latitude = "0.0000";
-  services.redshift.longitude = "0.0000";
+  # services.redshift.enable = true;
+  # services.redshift.brightness.day = "0.8";
+  # services.redshift.brightness.night = "0.4";
+  # services.redshift.latitude = "0.0000";
+  # services.redshift.longitude = "0.0000";
 
   services.openssh.enable = true;
   services.openssh.permitRootLogin = "yes";
